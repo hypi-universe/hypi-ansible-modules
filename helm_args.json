@@ -1,0 +1,9 @@
+{
+    "ANSIBLE_MODULE_ARGS": {
+        "name": "keycloakz",
+        "version": "3.4.1",
+        "source":{
+            "location":"/Users/zcourts/code/hypi/ansible-bloch-platform/roles/hypi-charts/files/platform/rook/"
+        }
+    }
+}
