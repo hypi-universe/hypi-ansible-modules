@@ -97,7 +97,7 @@ def run_module():
 
     req_file = os.path.join(chart_location, 'requirements.yaml')
     if os.path.isfile(req_file):
-        cmd_str = "helm dependency update && helm build %s" % chart_location
+        cmd_str = "helm dependency update %s" % chart_location
         (rc, out, err) = module.run_command(cmd_str, use_unsafe_shell=True)
         if rc:
             return module.fail_json(msg=err, rc=rc, cmd=cmd_str)
