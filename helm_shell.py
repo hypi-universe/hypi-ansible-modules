@@ -111,7 +111,7 @@ def run_module():
     out = out.splitlines()[-1:]
 
     if len(out) == 0 or not out[-1].strip():  # chart doesn't exist first time, install
-        cmd_str = "helm install --namespace='%s' --name='%s' %s" % (chart_namespace, chart_name, chart_location)
+        cmd_str = "helm install --namespace='%s' --name='%s' %s --version %s" % (chart_namespace, chart_name, chart_location, chart_version)
         (rc, out, err) = module.run_command(cmd_str, use_unsafe_shell=True)
         if rc:
             return module.fail_json(msg=err, rc=rc, cmd=cmd_str)
